@@ -46,7 +46,7 @@ const Hero = () => {
           <GoClock className="md:w-16 mt-1 md:h-16 w-5 h-5" />
           <div className="flex flex-col text-white ">
             <h1 className="font-bold italic text-base md:text-xl">Radno vreme</h1>
-            <p className="text-sm md:text-base w-full">
+            <p className="text-xs md:text-base w-full">
               Pon. - Pet. 7:00 - 22:00
               <br />
               Sub. - Ned. 8:00 - 21:00
