@@ -77,7 +77,7 @@ const Hero = () => {
             <IoLocationOutline className="w-4 h-4 md:w-8 md:h-8" />
             <Link
               href="https://www.google.com/maps/place/GYMART/@44.7821796,20.5201296,17z/data=!3m1!4b1!4m6!3m5!1s0x475a71d16aa6662b:0x580a9cfc2830381!8m2!3d44.7821758!4d20.5227045!16s%2Fg%2F11vz3tdf4t?entry=ttu"
-              className="text-xs text-right lg:text-right w-[9.5rem] md:text-base md:w-52 lg:w-full"
+              className="text-[0.6rem] text-right lg:text-right w-32 md:text-base md:w-52 lg:w-full"
             >
               Bulevar Kralja Aleksandra 455, Beograd
             </Link>
