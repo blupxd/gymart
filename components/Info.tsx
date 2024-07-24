@@ -4,8 +4,7 @@ import { LuDumbbell } from "react-icons/lu";
 import { LiaBroomSolid, LiaHandsHelpingSolid } from "react-icons/lia";
 import GallerySlide from "./GallerySlide";
 import Link from "next/link";
-import img1 from "@/public/images/image0.jpeg";
-import img0 from "@/public/images/image1.jpeg";
+import img0 from "@/public/images/image0.png";
 import img2 from "@/public/images/galerija/image_67210753.jpeg";
 import path from "path";
 import { promises as fs } from "fs";
@@ -86,22 +85,11 @@ const Info: React.FC = async () => {
           </div>
         </div>
         <div className="relative w-full lg:h-full z-10">
-          <div className="relative md:h-full h-96 left-0">
-            <span className="bg-zuta md:w-96 w-64 -left-5 h-6 lg:h-10 absolute -top-5 z-20" />
             <Image
               src={img0}
               alt="Image 0"
-              className="secnut3  z-10 md:w-72 lg:w-80 max-[400px]:w-40 w-48"
+              
             />
-            <span className="bg-plava md:w-96 w-64 -right-4 h-6 lg:h-10 absolute bottom-8 -z-10" />
-          </div>
-          <div className="absolute -right-2 sm:right-0 bottom-12 lg:bottom-16 z-20 ">
-            <Image
-              src={img1}
-              alt="Image 1"
-              className="secnut4 z-30 md:w-80 max-[400px]:w-40 w-48 shadow-lg shadow-black/30"
-            />
-          </div>
         </div>
       </section>
       <section
