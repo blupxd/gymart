@@ -185,7 +185,7 @@ const Info: React.FC = async () => {
         src={bg}
         fill
         objectFit="cover"
-        className="opacity-10"
+        className="opacity-5"
         alt="Background Image"
       />
     </section>
