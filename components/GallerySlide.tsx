@@ -26,21 +26,21 @@ const GallerySlide: React.FC<GallerySlideProps> = ({ imageFilenames }) => {
 
   const handleLeftClick = () => {
     if (scrollerRef.current && !isAtStart) {
-      scrollerRef.current.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth',
+      scrollerRef.current.scrollTo({
+        left: scrollerRef.current.scrollLeft - scrollAmount,
+        behavior: "smooth",
       });
-      updateScrollState();
+      setTimeout(updateScrollState, 500); // Delay to ensure smooth scroll completes before state update
     }
   };
 
   const handleRightClick = () => {
     if (scrollerRef.current && !isAtEnd) {
-      scrollerRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth',
+      scrollerRef.current.scrollTo({
+        left: scrollerRef.current.scrollLeft + scrollAmount,
+        behavior: "smooth",
       });
-      updateScrollState();
+      setTimeout(updateScrollState, 500); // Delay to ensure smooth scroll completes before state update
     }
   };
 

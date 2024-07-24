@@ -45,15 +45,15 @@ const Hero = () => {
         <div className="flex items-start gap-2">
           <GoClock className="md:w-16 mt-1 md:h-16 w-5 h-5" />
           <div className="flex flex-col text-white ">
-            <h1 className="font-bold italic text-xs md:text-xl">Radno vreme</h1>
-            <p className="text-[0.6rem] md:text-base w-full">
+            <h1 className="font-bold italic text-base md:text-xl">Radno vreme</h1>
+            <p className="text-sm md:text-base w-full">
               Pon. - Pet. 7:00 - 22:00
               <br />
               Sub. - Ned. 8:00 - 21:00
             </p>
           </div>
         </div>
-        <div className="flex md:flex-col flex-col-reverse gap-2">
+        <div className="flex md:flex-col flex-col-reverse justify-between md:justify-normal gap-2">
           <div className="flex lg:flex-row flex-col items-end lg:items-center md:gap-4 justify-end md:justify-between text-xl md:text-2xl">
             <Image
               src={fitpass}
