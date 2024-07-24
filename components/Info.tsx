@@ -64,7 +64,7 @@ const Info: React.FC = async () => {
         </h1>
         <GallerySlide imageFilenames={imageFilenames} />
       </section>
-      <section className="flex lg:flex-row flex-col-reverse items-end gap-6 mx-8 md:mx-24 mt-48 mb-20">
+      <section className="flex lg:flex-row flex-col-reverse items-end gap-6 mx-8 md:mx-24 mt-24 mb-20">
         <div className="flex flex-col text-center lg:text-left w-full">
           <h1 className="text-4xl lg:text-5xl font-bold lg:font-semibold text-black italic">
             Invalid friendly
