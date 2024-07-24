@@ -1,6 +1,11 @@
 "use client";
 import Image from "next/image";
-import { FaChevronLeft, FaChevronRight, FaInstagram, FaRegEnvelope } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaInstagram,
+  FaRegEnvelope,
+} from "react-icons/fa";
 import React, { useRef, useState, useEffect } from "react";
 import dummy from "@/public/images/heroImage.jpeg";
 import Link from "next/link";
@@ -56,22 +61,17 @@ const Personalni: React.FC = () => {
     const timer = setInterval(() => {
       if (scrollerRef.current) {
         if (isAtEnd) {
-          scrollerRef.current.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth",
-          });
-        } else if (isAtStart) {
-          scrollerRef.current.scrollBy({
-            left: scrollAmount,
+          scrollerRef.current.scrollTo({
+            left: scrollerRef.current.scrollLeft - scrollAmount,
             behavior: "smooth",
           });
         } else {
-          scrollerRef.current.scrollBy({
-            left: scrollAmount,
+          scrollerRef.current.scrollTo({
+            left: scrollerRef.current.scrollLeft + scrollAmount,
             behavior: "smooth",
           });
         }
-        updateScrollState();
+        setTimeout(updateScrollState, 500); // Delay to ensure smooth scroll completes before state update
       }
     }, 5000);
     return () => clearInterval(timer);
@@ -79,24 +79,23 @@ const Personalni: React.FC = () => {
 
   const handleLeftClick = () => {
     if (scrollerRef.current && !isAtStart) {
-      scrollerRef.current.scrollBy({
-        left: -scrollAmount,
+      scrollerRef.current.scrollTo({
+        left: scrollerRef.current.scrollLeft - scrollAmount,
         behavior: "smooth",
       });
-      updateScrollState();
+      setTimeout(updateScrollState, 500); // Delay to ensure smooth scroll completes before state update
     }
   };
 
   const handleRightClick = () => {
     if (scrollerRef.current && !isAtEnd) {
-      scrollerRef.current.scrollBy({
-        left: scrollAmount,
+      scrollerRef.current.scrollTo({
+        left: scrollerRef.current.scrollLeft + scrollAmount,
         behavior: "smooth",
       });
-      updateScrollState();
+      setTimeout(updateScrollState, 500); // Delay to ensure smooth scroll completes before state update
     }
   };
-
   return (
     <div className="z-10 relative mt-10">
       <button
@@ -112,17 +111,25 @@ const Personalni: React.FC = () => {
         onScroll={updateScrollState}
       >
         {treneri.map((x, y) => (
-          <div key={y} className="md:px-0 md:py-8 lg:p-6 flex flex-col items-center text-white">
+          <div
+            key={y}
+            className="md:px-0 md:py-8 lg:p-6 flex flex-col items-center text-white"
+          >
             <div className="w-full h-80 lg:h-96 relative shadow-md shadow-black/30">
               <Image src={x.slika} alt={x.ime} fill objectFit="cover" />
             </div>
-            <h1 className="text-3xl lg:text-4xl text-center font-medium mt-2">{x.ime}</h1>
+            <h1 className="text-3xl lg:text-4xl text-center font-medium mt-2">
+              {x.ime}
+            </h1>
             <h2 className="italic text-lg font-thin">personalni trener</h2>
             <div className="flex items-center justify-between w-24 mt-2">
               <a href={`mailto: ${x.email}`} className="text-xl">
                 <FaRegEnvelope />
               </a>
-              <Link className="text-xl" href={`https://www.instagram.com/${x.instagram}`}>
+              <Link
+                className="text-xl"
+                href={`https://www.instagram.com/${x.instagram}`}
+              >
                 <FaInstagram />
               </Link>
               <a href={`tel: ${x.tel}`} className="text-xl">
