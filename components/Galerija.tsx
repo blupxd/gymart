@@ -31,7 +31,7 @@ const Gallery: React.FC<GallerySlideProps> = ({ imageFilenames }) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-24 py-12 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 md:px-24 py-12 gap-8">
       {imageFilenames.map((x, y) => (
         <div
           key={y}

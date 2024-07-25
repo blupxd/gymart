@@ -7,7 +7,7 @@ const Galerija: React.FC = async () => {
   const imageFilenames = await fs.readdir(imageDirectory);
   return (
     <section className="flex flex-col pt-36 gap-4 bg-white">
-         <h1 className="text-4xl md:text-5xl font-extrabold italic text-center text-black">
+         <h1 className="text-5xl font-extrabold italic text-center text-black">
           Slike naše teretane
         </h1>
         <Gallery imageFilenames={imageFilenames} />
