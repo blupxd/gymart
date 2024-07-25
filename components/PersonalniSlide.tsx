@@ -20,24 +20,24 @@ const Personalni: React.FC = () => {
 
   const treneri = [
     {
-      ime: "Mika Mikic",
-      email: "email@gmail.com",
-      instagram: "gymart.beograd",
-      tel: "+381 61 1234 567",
+      ime: "Mira Skrobić",
+      email: "miraskrobic3@gmail.com",
+      instagram: "_mirkaa_997",
+      tel: "+381 61 2964 517",
       slika: dummy,
     },
     {
-      ime: "Mika Mikic",
-      email: "email@gmail.com",
-      instagram: "gymart.beograd",
-      tel: "+381 61 1234 567",
+      ime: "Aleksandra Petković",
+      email: "aleksandrapetkovic756@gmail.com",
+      instagram: "petkovic_aleksandra",
+      tel: "+381 69 5503 545",
       slika: dummy,
     },
     {
-      ime: "Mika Mikic",
-      email: "email@gmail.com",
-      instagram: "gymart.beograd",
-      tel: "+381 61 1234 567",
+      ime: "Petar Petrović",
+      email: "petarpetar1@live.com",
+      instagram: "petar__petrovic",
+      tel: "+381 60 1538 707",
       slika: dummy,
     },
     {

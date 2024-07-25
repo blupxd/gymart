@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import heroImage from "@/public/images/heroImage.jpeg";
 import heroLogo from "@/public/images/herologo.png";
@@ -7,45 +8,55 @@ import fitpass from "@/public/images/fitpass.png";
 import { FaInstagram, FaRegEnvelope } from "react-icons/fa";
 import { FiExternalLink, FiPhone } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
+import CountUp from "react-countup";
+import Animation2 from "./Animation2";
+import Animation1 from "./Animation1";
 
 const Hero = () => {
   return (
     <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28  flex-col w-full overflow-hidden">
-      <div className="flex flex-col items-center p-20">
-        <Image src={heroLogo} alt="Hero Logo Image" width={300} />
-        <h1 className="text-white text-xl md:w-96 w-72 text-center mt-4">
-          Pridruži nam se danas i postani član{" "}
-          <span className="font-bold italic">GYMART</span> teretane!
-        </h1>
-        -
-        <Link
-          href="#pridruzi-se"
-          className="border-2 border-white px-6 font-medium mt-4 py-2"
-        >
-          Postani član
-        </Link>
-      </div>
-      <div className="bg-plava flex py-2 md:py-4 px-8 md:px-24 w-full md:max-w-max secnut2">
-        <div className="flex flex-col pr-4 md:pr-12 border-r border-white">
-          <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
-            200+
+      <Animation1>
+        <div className="flex flex-col items-center p-20">
+          <Image src={heroLogo} alt="Hero Logo Image" width={300} />
+          <h1 className="text-white text-xl md:w-96 w-72 text-center mt-4">
+            Pridruži nam se danas i postani član{" "}
+            <span className="font-bold italic">GYMART</span> teretane!
           </h1>
-          <p className="text-xs md:text-xl font-light">zadovoljnih vežbača</p>
+          <Link
+            href="#pridruzi-se"
+            className="border-2 transition-all duration-200 ease-in-out bg-white text-black hover:bg-white/0 hover:text-white px-6 font-medium mt-4 py-2"
+          >
+            Postani član
+          </Link>
         </div>
-        <div className="ml-4 flex flex-col">
-          <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
-            4
-          </h1>
-          <p className="text-xs md:text-xl font-light">
-            profesionalnih trenera
-          </p>
+      </Animation1>
+
+      <Animation2>
+        <div className="bg-plava flex py-2 md:py-4 px-8 md:px-24 w-full md:max-w-max secnut2">
+          <div className="flex flex-col pr-4 md:pr-12 border-r border-white">
+            <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
+              <CountUp end={200} duration={3} start={0} />+
+            </h1>
+            <p className="text-xs md:text-xl font-light">zadovoljnih vežbača</p>
+          </div>
+          <div className="ml-4 flex flex-col">
+            <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
+              <CountUp end={4} duration={3} start={0} />
+            </h1>
+            <p className="text-xs md:text-xl font-light">
+              profesionalnih trenera
+            </p>
+          </div>
         </div>
-      </div>
+      </Animation2>
+
       <aside className="bg-black py-4 px-8 md:px-24 flex items-start justify-between">
         <div className="flex items-start gap-2">
           <GoClock className="md:w-16 mt-1 md:h-16 w-5 h-5" />
           <div className="flex flex-col text-white ">
-            <h1 className="font-bold italic text-base md:text-xl">Radno vreme</h1>
+            <h1 className="font-bold italic text-base md:text-xl">
+              Radno vreme
+            </h1>
             <p className="text-xs md:text-base w-full">
               Pon. - Pet. 7:00 - 22:00
               <br />
@@ -65,7 +76,7 @@ const Hero = () => {
               <Link href="https://www.instagram.com/gymart.beograd">
                 <FaInstagram />
               </Link>
-              <a href="tel:+381 61 1234 567">
+              <a href="tel:+381 11 7643 340">
                 <FiPhone />
               </a>
               <a href="mailto:gymart.beograd@gmail.com">

@@ -27,11 +27,11 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className=" bg-emerald flex flex-col relative">
-      <div className="grid px-8 py-12 md:p-24 gap-12 md:gap-0 grid-cols-1 md:grid-cols-3">
+    <footer className=" bg-emerald flex flex-col">
+      <div className="grid px-8 py-12 md:p-24 gap-12 md:gap-0 grid-cols-1 md:cols-2 lg:grid-cols-3">
         <section className="flex  flex-col md:items-start items-center h-full gap-4">
           <Image src={heroLogo} alt="Hero Logo Image" width={150} />
-          <div className="flex flex-col md:items-start items-center h-full gap-4">
+          <div className="flex text-white flex-col md:items-start items-center h-full gap-4">
             <div className="flex items-center gap-2 ">
               <FaInstagram className="text-2xl" />
               <Link
@@ -44,10 +44,10 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <FiPhone className="text-2xl" />
               <a
-                href="tel:+381 61 1234 567"
+                href="tel:+381 11 7643 340"
                 className="italic text-sm lg:text-base font-light"
               >
-                +381 61 1234 567
+                +381 11 7643 340
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -76,7 +76,7 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
-        <section className="flex flex-col md:gap-0 gap-12 md:justify-between md:mt-0">
+        <section className="flex md:col-span-2 lg:col-span-1 lg:mt-0 flex-col lg:gap-0 gap-12 md:justify-between md:mt-12">
           <h1 className="text-center text-2xl md:text-2xl lg:text-4xl italic font-black text-zuta">
             “
             <span className="text-white font-normal">
@@ -90,7 +90,7 @@ const Footer = () => {
               Bulevar Kralja Aleksandra 455, Beograd
             </h2>
           </div>
-          <div className="flex items-start gap-2">
+          <div className="flex items-start text-white gap-2">
             <GoClock className="text-2xl" />
 
             <p className="text-base md:text-sm lg:text-lg">
@@ -101,9 +101,11 @@ const Footer = () => {
           </div>
         </section>
       </div>
-        <div className="px-24 py-8 w-full bg-tamni-emerald">
-          <p className="text-center text-white/50 font-light text-xs">Copyright © 2024. Sva prava zadržana.</p>
-        </div>
+      <div className="px-24 py-8 w-full bg-tamni-emerald">
+        <p className="text-center text-white/50 font-light text-xs">
+          Copyright © 2024. Sva prava zadržana.
+        </p>
+      </div>
     </footer>
   );
 };
