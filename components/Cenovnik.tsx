@@ -141,7 +141,7 @@ const Cenovnik = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:hidden flex flex-col w-full mt-12">
+            <div className="md:hidden flex flex-col w-full mt-12">
               <button
                 onClick={() =>
                   showProgarms ? setShowPrograms(false) : setShowPrograms(true)
@@ -156,7 +156,7 @@ const Cenovnik = () => {
                 animate={showProgarms ? "open" : "closed"}
                 variants={variants}
                 transition={{ duration: 0.3 }}
-                className="lg:hidden overflow-hidden items-center text-center flex flex-col p-4 w-full gap-4 bg-white max-h-max"
+                className="lg:hidden overflow-hidden pt-8 items-center text-center flex flex-col w-full gap-4 bg-white max-h-max"
               >
                 <div className="flex items-center flex-col gap-1">
                   <div className="flex items-center gap-1">

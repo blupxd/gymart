@@ -41,10 +41,10 @@ const Personalni: React.FC = () => {
       slika: dummy,
     },
     {
-      ime: "Mika Mikic",
-      email: "email@gmail.com",
-      instagram: "gymart.beograd",
-      tel: "+381 61 1234 567",
+      ime: "Marko Stefanović",
+      email: "stefanovicmare@gmail.com",
+      instagram: "markomss",
+      tel: "+381 60 6643 595",
       slika: dummy,
     },
   ];

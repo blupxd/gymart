@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28 bg-black flex-col w-full overflow-hidden">
       <Animation1>
-        <div className="flex flex-col items-center p-20">
+        <div className="z-20 flex flex-col items-center p-20">
           <Image src={heroLogo} alt="Hero Logo Image" width={300} />
           <h1 className="text-white text-xl md:w-96 w-72 text-center mt-4">
             Pridruži nam se danas i postani član{" "}
@@ -30,9 +30,9 @@ const Hero = () => {
           </Link>
         </div>
       </Animation1>
-
+    
       <Animation2>
-        <div className="bg-plava flex py-2 md:py-4 px-8 md:px-24 w-full md:max-w-max secnut2">
+        <div className="bg-plava z-20 flex py-2 md:py-4 px-8 md:px-24 w-full md:max-w-max secnut2">
           <div className="flex flex-col pr-4 md:pr-12 border-r border-white">
             <p className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
               <CountUp end={200} duration={3} start={0} />+
@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
       </Animation2>
 
-      <aside className="bg-black py-4 px-8 md:px-24 flex items-start justify-between">
+      <aside className="bg-black z-20 py-4 px-8 md:px-24 flex items-start justify-between">
         <div className="flex items-start gap-2">
           <GoClock className="md:w-16 mt-1 text-white md:h-16 w-5 h-5" />
           <div className="flex flex-col text-white ">
@@ -98,14 +98,14 @@ const Hero = () => {
       </aside>
       <Image
         src={fitpass}
-        className="absolute bottom-10 max-w-max left-0 right-0 mx-auto lg:hidden"
+        className="absolute z-20 bottom-10 max-w-max left-0 right-0 mx-auto lg:hidden"
         width={300}
         alt="Fitpass partner"
       />
       <Image
         src={heroImage}
         alt="Hero Background Image"
-        className="opacity-20 -z-10"
+        className="opacity-10 z-10"
         fill
         objectFit="cover"
       />

@@ -12,7 +12,7 @@ const Animation1: FC<AnimatedComponentProps> = ({ children }) => {
 
   return (
     <motion.div
-      className="w-full inline-block"
+      className="w-full inline-block h-full"
       ref={ref}
       initial={{ y: 50, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
