@@ -85,8 +85,8 @@ const Footer = () => {
             ”
           </h1>
           <div className="flex items-start md:items-center gap-1">
-            <IoLocationOutline className="text-2xl mt-1 md:mt-0" />
-            <h2 className="text-base md:text-sm lg:text-lg font-light">
+            <IoLocationOutline className="text-2xl mt-1 text-white md:mt-0" />
+            <h2 className="text-base md:text-sm text-white lg:text-lg font-light">
               Bulevar Kralja Aleksandra 455, Beograd
             </h2>
           </div>

@@ -101,7 +101,7 @@ const GallerySlide: React.FC<GallerySlideProps> = ({ imageFilenames }) => {
       </div>
       <Link
         href="/galerija"
-        className="bg-black hover:bg-tamni-emerald transition-all duration-200 ease-in-out absolute left-0 right-0 -bottom-8 px-10 md:px-14 font-normal py-2 max-w-max mx-auto"
+        className="bg-black hover:bg-tamni-emerald transition-all duration-200 ease-in-out absolute left-0 text-white right-0 -bottom-8 px-10 md:px-14 font-normal py-2 max-w-max mx-auto"
       >
         Vidi sve
       </Link>

@@ -95,7 +95,7 @@ const Cenovnik = () => {
           </div>
         </Animation1>
       ))}
-      <div className="col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-2">
+      <div className="col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-2 h-full">
         <Animation1>
           <div className="bg-white h-auto border-b-8 border-svetlo-plava px-6 py-8 flex md:flex-row flex-col items-center">
             <div className="flex flex-col gap-3 items-center w-auto md:pr-4 md:border-r border-svetlo-plava">
@@ -185,7 +185,7 @@ const Cenovnik = () => {
           </div>
         </Animation1>
       </div>
-      <div className="col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-2">
+      <div className="col-span-1 md:col-span-2 lg:col-span-4 xl:col-span-2 h-full">
         <Animation1>
           <div className="bg-white h-full border-b-8 border-svetlo-plava px-6 py-8 flex flex-col gap-3 items-center">
             <h1 className="text-black text-2xl italic font-normal">

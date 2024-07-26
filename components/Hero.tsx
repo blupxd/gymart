@@ -14,7 +14,7 @@ import Animation1 from "./Animation1";
 
 const Hero = () => {
   return (
-    <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28  flex-col w-full overflow-hidden">
+    <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28 bg-black flex-col w-full overflow-hidden">
       <Animation1>
         <div className="flex flex-col items-center p-20">
           <Image src={heroLogo} alt="Hero Logo Image" width={300} />
@@ -34,15 +34,15 @@ const Hero = () => {
       <Animation2>
         <div className="bg-plava flex py-2 md:py-4 px-8 md:px-24 w-full md:max-w-max secnut2">
           <div className="flex flex-col pr-4 md:pr-12 border-r border-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
+            <p className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
               <CountUp end={200} duration={3} start={0} />+
-            </h1>
+            </p>
             <p className="text-xs md:text-xl font-light">zadovoljnih vežbača</p>
           </div>
           <div className="ml-4 flex flex-col">
-            <h1 className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
+            <p className="text-4xl md:text-5xl font-extrabold italic md:font-normal">
               <CountUp end={4} duration={3} start={0} />
-            </h1>
+            </p>
             <p className="text-xs md:text-xl font-light">
               profesionalnih trenera
             </p>
@@ -52,7 +52,7 @@ const Hero = () => {
 
       <aside className="bg-black py-4 px-8 md:px-24 flex items-start justify-between">
         <div className="flex items-start gap-2">
-          <GoClock className="md:w-16 mt-1 md:h-16 w-5 h-5" />
+          <GoClock className="md:w-16 mt-1 text-white md:h-16 w-5 h-5" />
           <div className="flex flex-col text-white ">
             <h1 className="font-bold italic text-base md:text-xl">
               Radno vreme
