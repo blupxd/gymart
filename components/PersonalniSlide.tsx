@@ -118,7 +118,7 @@ const Personalni: React.FC = () => {
             key={y}
             className="md:px-0 md:py-8 lg:p-6 flex flex-col items-center text-white"
           >
-            <div className="w-full pt-4 h-80 lg:h-96 relative shadow-md shadow-black/30">
+            <div className="w-full h-96 relative shadow-md shadow-black/30">
               <Image src={x.slika} alt={x.ime} fill objectFit="cover" />
             </div>
             <h1 className="text-3xl lg:text-4xl text-center font-medium mt-2">
