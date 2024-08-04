@@ -14,7 +14,7 @@ import Animation1 from "./Animation1";
 
 const Hero = () => {
   return (
-    <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28 bg-black flex-col w-full overflow-hidden">
+    <header className="relative mt-10 md:mt-20 flex lg:pb-0 pb-28 text-white bg-black flex-col w-full overflow-hidden">
       <Animation1>
         <div className="z-20 flex flex-col items-center p-20">
           <Image src={heroLogo} alt="Hero Logo Image" width={300} />
