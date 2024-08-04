@@ -10,7 +10,10 @@ import React, { useRef, useState, useEffect } from "react";
 import dummy from "@/public/images/heroImage.jpeg";
 import Link from "next/link";
 import { FiPhone } from "react-icons/fi";
-
+import aleksandra from "@/public/images/aleksandra.jpg"
+import marko from "@/public/images/marko.jpg"
+import petar from "@/public/images/petar.jpg"
+import mira from "@/public/images/mira.jpg"
 // Komponenta
 const Personalni: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -22,30 +25,30 @@ const Personalni: React.FC = () => {
     {
       ime: "Mira Skrobić",
       email: "miraskrobic3@gmail.com",
-      instagram: "_mirkaa_997",
+      instagram: "_mirkaa997_",
       tel: "+381 61 2964 517",
-      slika: dummy,
+      slika: mira,
     },
     {
       ime: "Aleksandra Petković",
       email: "aleksandrapetkovic756@gmail.com",
       instagram: "petkovic_aleksandra",
       tel: "+381 69 5503 545",
-      slika: dummy,
+      slika: aleksandra,
     },
     {
       ime: "Petar Petrović",
       email: "petarpetar1@live.com",
       instagram: "petar__petrovic",
       tel: "+381 60 1538 707",
-      slika: dummy,
+      slika: petar,
     },
     {
       ime: "Marko Stefanović",
       email: "stefanovicmare@gmail.com",
       instagram: "markomss",
       tel: "+381 60 6643 595",
-      slika: dummy,
+      slika: marko,
     },
   ];
 
