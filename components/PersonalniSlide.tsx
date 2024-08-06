@@ -55,7 +55,7 @@ const Personalni: React.FC = () => {
   const updateScrollState = () => {
     if (scrollerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollerRef.current;
-      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth - 100);
+      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth);
       setIsAtStart(scrollLeft === 0);
     }
   };
