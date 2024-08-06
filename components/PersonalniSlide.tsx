@@ -19,7 +19,7 @@ const Personalni: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [isAtEnd, setIsAtEnd] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
-  const scrollAmount = 250; // Prilagodite ovu vrednost prema potrebi
+  const scrollAmount = 50; // Prilagodite ovu vrednost prema potrebi
 
   const treneri = [
     {
