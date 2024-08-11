@@ -65,7 +65,7 @@ const Personalni: React.FC = () => {
       if (scrollerRef.current) {
         if (isAtEnd) {
           scrollerRef.current.scrollTo({
-            left: scrollerRef.current.scrollLeft - scrollAmount,
+            left: 0,
             behavior: "smooth",
           });
         } else {
