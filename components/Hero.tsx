@@ -44,7 +44,7 @@ const Hero = () => {
               <CountUp end={4} duration={3} start={0} />
             </p>
             <p className="text-xs md:text-xl font-light">
-              profesionalnih trenera
+              profesionalna trenera
             </p>
           </div>
         </div>
