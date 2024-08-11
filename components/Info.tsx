@@ -81,7 +81,7 @@ const Info: React.FC = async () => {
             <p className="text-black leading-6 lg:leading-8 w-full lg:w-[30rem] text-base md:text-2xl italic font-light">
               U nasoj teretani vecina sprava za gornji deo tela poseduje opciju{" "}
               <span className="font-medium">prilaska invalidskih kolica</span>,
-              kao i <span className="font-medium">prilagodjeni toalet.</span>
+              kao i <span className="font-medium">prilagođeni toalet.</span>
             </p>
             <div className="flex flex-col w-full lg:max-w-max">
               <h3 className="text-lg lg:text-3xl mt-4 mb-2 lg:my-6 italic font-extrabold text-black">
