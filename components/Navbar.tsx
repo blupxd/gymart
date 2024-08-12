@@ -81,7 +81,7 @@ const Navbar = () => {
           ))}
           <Link
             onClick={() => setMenu(false)}
-            href="#pridruzi-se"
+            href="/#pridruzi-se"
             className="bg-black  hover:bg-tamni-emerald transition-all duration-200 lg:hidden text-white px-6 py-2 text-xs font-medium"
           >
             Pridruži se
