@@ -79,7 +79,7 @@ const Cenovnik = () => {
             <h1 className="text-black text-2xl italic font-normal">
               {x.title}
             </h1>
-            <h2 className="text-3xl italic text-svetlo-plava font-bold">
+            <h2 className="text-3xl italic text-center text-svetlo-plava font-bold">
               {x.price} <span className="text-black">RSD</span>
             </h2>
             <div className="flex flex-col gap-2">
@@ -102,7 +102,7 @@ const Cenovnik = () => {
               <h1 className="text-black text-2xl italic font-normal">
                 {vodjeni.title}
               </h1>
-              <h2 className="text-3xl italic text-zuta font-extrabold">
+              <h2 className="text-3xl text-center italic text-zuta font-extrabold">
                 {vodjeni.price} <span className="text-black">RSD</span>
                 <span className="text-xs text-black">/mes</span>
               </h2>
@@ -191,7 +191,7 @@ const Cenovnik = () => {
             <h1 className="text-black text-2xl italic font-normal">
               {personalni.title}
             </h1>
-            <h2 className="text-3xl italic text-zuta font-extrabold">
+            <h2 className="text-3xl text-center italic text-zuta font-extrabold">
               {personalni.price} <span className="text-black">RSD</span>
               <span className="text-xs text-black">/mes</span>
             </h2>

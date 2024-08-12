@@ -170,7 +170,7 @@ const Info: React.FC = async () => {
         <Cenovnik />
       </section>
       <section id="treneri" className="relative flex flex-col z-10 mt-24 mb-36">
-        <h1 className="text-5xl italic md:block hidden font-medium text-center text-black">
+        <h1 className="text-5xl italic md:block hidden font-medium text-center text-black mb-8">
           Upoznajte naš tim
         </h1>
         <div className="z-10 bg-plava py-24 krivina2 md:krivina">
