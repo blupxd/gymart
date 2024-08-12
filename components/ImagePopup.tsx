@@ -87,14 +87,13 @@ const ImagePopup: FC<ImagePopupProps> = ({
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="relative rounded-lg max-w-3xl"
+            className="relative rounded-lg w-[16rem] h-[24rem] sm:h-[24rem] sm:w-[16rem] md:h-[30rem] md:w-[20rem] lg:h-[42rem] lg:w-[26rem] xl:h-[52rem] xl:w-[36rem]"
           >
             <Image
               src={`/images/galerija/${imageFilenames[currentImageIndex]}`}
               alt={imageFilenames[currentImageIndex]}
-              width={800}
-              height={600}
-              objectFit="contain"
+              objectFit="cover"
+              fill
             />
           </motion.div>
 
