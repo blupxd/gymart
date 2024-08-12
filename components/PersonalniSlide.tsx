@@ -19,21 +19,9 @@ const Personalni: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [isAtEnd, setIsAtEnd] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const windowWidth = useWindowSize();
 
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    console.log(windowWidth)
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  const scrollAmount = windowWidth > 2000 ? 850 : 250; // Prilagodite ovu vrednost prema potrebi
+  const scrollAmount = windowWidth.width > 2000 ? 850 : 250; // Prilagodite ovu vrednost prema potrebi
   const lastRef = useRef<any>(null);
   const treneri = [
     {
@@ -168,5 +156,24 @@ const Personalni: React.FC = () => {
     </div>
   );
 };
+function useWindowSize() {
 
+  const [windowSize, setWindowSize] = useState<any>({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+}
 export default Personalni;
