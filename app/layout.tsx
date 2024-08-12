@@ -9,6 +9,8 @@ const mont = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "GymArt Beograd",
   description: "GymArt - Izgradite vaše telo kao nikada do sad!",
+  keywords: "fitness, gym, bodybuilding, trening, Beograd, teretana",
+  metadataBase: new URL("https://www.gymart.rs")
 };
 
 export default function RootLayout({

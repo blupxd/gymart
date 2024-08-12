@@ -79,7 +79,7 @@ const Info: React.FC = async () => {
               I invaliditet voli sport!
             </h2>
             <p className="text-black leading-6 lg:leading-8 w-full lg:w-[30rem] text-base md:text-2xl italic font-light">
-              U nasoj teretani vecina sprava za gornji deo tela poseduje opciju{" "}
+              U našoj teretani većina sprava za gornji deo tela poseduje opciju{" "}
               <span className="font-medium">prilaska invalidskih kolica</span>,
               kao i <span className="font-medium">prilagođeni toalet.</span>
             </p>

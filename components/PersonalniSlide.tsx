@@ -7,20 +7,34 @@ import {
   FaRegEnvelope,
 } from "react-icons/fa";
 import React, { useRef, useState, useEffect } from "react";
-import dummy from "@/public/images/heroImage.jpeg";
 import Link from "next/link";
 import { FiPhone } from "react-icons/fi";
 import aleksandra from "@/public/images/aleksandra.jpg"
 import marko from "@/public/images/marko.jpg"
 import petar from "@/public/images/petar.jpg"
 import mira from "@/public/images/mira.jpg"
+import { useInView } from "framer-motion";
 // Komponenta
 const Personalni: React.FC = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [isAtEnd, setIsAtEnd] = useState(false);
   const [isAtStart, setIsAtStart] = useState(true);
-  const scrollAmount = 250; // Prilagodite ovu vrednost prema potrebi
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    console.log(windowWidth)
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  const scrollAmount = windowWidth > 2000 ? 850 : 250; // Prilagodite ovu vrednost prema potrebi
+  const lastRef = useRef<any>(null);
   const treneri = [
     {
       ime: "Mira Skrobić",
@@ -51,19 +65,20 @@ const Personalni: React.FC = () => {
       slika: marko,
     },
   ];
-
+  const isInView = useInView(lastRef)
   const updateScrollState = () => {
     if (scrollerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollerRef.current;
-      setIsAtEnd(scrollLeft + clientWidth >= scrollWidth);
+      setIsAtEnd(isInView);
       setIsAtStart(scrollLeft === 0);
     }
   };
 
   useEffect(() => {
+    console.log(isInView)
     const timer = setInterval(() => {
       if (scrollerRef.current) {
-        if (isAtEnd) {
+        if (isInView) {
           scrollerRef.current.scrollTo({
             left: 0,
             behavior: "smooth",
@@ -78,7 +93,7 @@ const Personalni: React.FC = () => {
       }
     }, 5000);
     return () => clearInterval(timer);
-  }, [isAtEnd, isAtStart]);
+  }, [isInView, isAtStart]);
 
   const handleLeftClick = () => {
     if (scrollerRef.current && !isAtStart) {
@@ -91,7 +106,7 @@ const Personalni: React.FC = () => {
   };
 
   const handleRightClick = () => {
-    if (scrollerRef.current && !isAtEnd) {
+    if (scrollerRef.current && !isInView) {
       scrollerRef.current.scrollTo({
         left: scrollerRef.current.scrollLeft + scrollAmount,
         behavior: "smooth",
@@ -116,12 +131,13 @@ const Personalni: React.FC = () => {
         {treneri.map((x, y) => (
           <div
             key={y}
-            className="md:px-0 md:py-8 lg:p-6 flex flex-col items-center text-white"
+            ref={y === treneri.length-1 ? lastRef : null}
+            className="md:px-0 md:py-8 xl:p-6 flex flex-col items-center text-white"
           >
-            <div className="w-full h-96 relative shadow-md shadow-black/30">
+            <div className="w-full h-[30rem] sm:h-[28rem] md:h-96 lg:h-[32] relative shadow-md shadow-black/30">
               <Image src={x.slika} alt={x.ime} fill objectFit="cover" />
             </div>
-            <h1 className="text-3xl lg:text-4xl text-center font-medium mt-2">
+            <h1 className="text-3xl md:text-2xl lg:text-3xl text-center font-medium mt-2">
               {x.ime}
             </h1>
             <h2 className="italic text-lg font-thin">personalni trener</h2>
@@ -144,8 +160,8 @@ const Personalni: React.FC = () => {
       </div>
       <button
         onClick={handleRightClick}
-        className="text-white right-10 text-3xl max-h-max absolute bottom-6 md:bottom-20 lg:top-1/2 "
-        disabled={isAtEnd}
+        className="text-white right-10 text-3xl max-h-max absolute bottom-6 md:bottom-20 z-20 lg:top-1/2 "
+        disabled={isInView}
       >
         <FaChevronRight />
       </button>
