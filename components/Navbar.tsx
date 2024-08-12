@@ -49,7 +49,7 @@ const Navbar = () => {
         ))}
       </ul>
       <Link
-        href="#pridruzi-se"
+        href="/#pridruzi-se"
         className="bg-black  hover:bg-tamni-emerald transition-all duration-200 lg:block hidden text-white px-6 py-2 text-sm font-medium"
       >
         Pridruži se
